@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Untitled Document</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+
+
+<body style="color: rgb(0, 0, 0); background-image: url(BACKGRND.jpg);" link="#000099" vlink="#0075ea">
+
+<div align="center">
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Structure vs Material</u></font></p>
+
+<p><img src="bone12.jpg" align="right" height="218" width="295"></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">When we examined the mechanical properties of bone,
+it was stated that bone fails first in tension but materials like
+metals (steel. alluminum, etc) or plastic can withstand much more
+stress in tension than in compression. This may seem like a
+contradiction but really it has more to do with how a structure can
+behave differently than a material even if the structure is constructed
+from that material, In a structure, the material is organized in such a
+way to obtain the desired mechanical behavior. The </font><font face="Comic Sans MS" size="4">image to the right
+shows a model of the
+trabeculae in a section of bone. We can see that the structure of bone
+is a network of connected trusses</font><font face="Comic Sans MS" size="4">. In order to
+understand the behavior of the structure we need to know the stress
+placed on each truss. We cannot simply assume that if we place the
+structure in compression that each truss will have an equal load or an
+equal stress.</font></p>
+
+<br>
+
+<p align="left"><big><font face="Comic Sans MS" size="4"><big>Simple Trusses and the Method of Joints:</big></font></big></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Quite often in
+engineering, an object is a structure composed of rigid links and it is
+necessary to know all of the forces on each link. A link is called a
+"truss" and the forces are determined using the method of joints. In
+biomechanics, we do not use this method as much as civil engineers
+designing bridges but a basic understanding is useful for more advanced
+topics such as bone modeling and finite element modeling that is
+becoming an important part of biomechanics.&nbsp;</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Let us look at a typical engineering problem in
+which we need to know the compression and tension forces on each truss
+of the bridge shown below. The bridge is a structure made of seven
+trusses: AB, AC, BC, BD, CD, CE, and DE.</font></p>
+
+<p><img src="Static15.jpg" align="middle" height="380" width="580"></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Step !: Find the external forces R<sub>A</sub>
+and R<sub>E</sub>. We can use the sum of the moments about
+E to find R<sub>A</sub> and then the sum of the forces in
+the Y direction to find R<sub>E</sub>.</font></p>
+
+<p><img src="Static16.jpg" align="left" height="330" width="520"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Step 2: Draw free body diagrams of each joint and
+choose the joint with the lowest number of
+unknown forces acting on it to start solving the truss forces.</font></p>
+
+<p><img src="Static17.jpg" align="middle" height="380" width="580"></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Joints A and E have 2 unknown forces, joints B and
+D have 3 unknown forces and joint C has four unknown forces. We will
+start with joint A and use the method of joints to solve for forces AB
+and AC. Since AC is horizontal, the vertical component of AB must
+balance the 14000 N force. We use the sum of the forces in the vertical
+(Y) direction to find AB and then we can use the sum of the forces in
+the horizontal direction to find force AC.</font></p>
+
+<p><img src="Static18.jpg" align="left" height="270" width="450"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Similarly we can do
+the same thing for joint E to solve the forces DE and CE. Since CE is
+horizontal, the vertical component of DE must
+balance the 18000 N force. We use the sum of the forces in the vertical
+(Y) direction to find DE and then we can use the sum of the forces in
+the horizontal direction to find force CE.</font></p>
+
+<p><img src="Static19.jpg" align="left" height="270" width="450"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Now that we know force AB = 16166 N, we can examine
+joint B and determine the forces BC and BD. Since BD is horizontal, We
+can sum the vertical forces to find force BC, We can then sum the
+horizontal forces to find force BD.</font></p>
+
+<p><img src="Static20.jpg" align="left" height="270" width="600"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><font face="Comic Sans MS" size="4">And now that we know force DE = 20785 N, we can
+examine
+joint D and determine the last remaining force CD.&nbsp;We
+can sum the vertical forces to find force&nbsp;CD.</font></p>
+
+<p><img src="Static21.jpg" align="left" height="180" width="550"></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><font face="Comic Sans MS" size="4">We have now found
+the forces in all seven trusses and we don't need to examine joint C.
+However, it is a good idea to use joint C as a check to see that it is
+indeed in static equilibrium and that we have not made a mistake.</font></p>
+
+<p><img src="Structure2.jpg" align="right" height="380" width="580"></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">The forces in the trusses are:</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">AB = 16170 N compression</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">AC = 8080 N tension</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">DE = 20800 N compression</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">CE = 10390 N tension</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">BC = 11550 N tension</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">BD = 13860 N compression</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">CD = 6930 N tension</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Notice that some of
+the trusses have compression loads and others are loaded in tension.
+This may be surprising because we might assume that all of the elements
+are loaded in compression as gravity pulls the bridge down against the
+resistance of its supports. But this is not the case and without the
+method of joints, we might have a structure that behaves much
+differently from what we would expect and we wouldn't know why.</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">If this bridge was
+made of steel, and we know that steel can withstand larger forces in
+tension than in compression, we could use this information to choose
+the size of the trusses needed to withstand the loads. For instance,
+trusses BC, and CD are in tension, have relatively small loads and
+could be replaced with thinner cables. Conversely, AB, BD, and DE have
+large compressive loads and would require strong, thick beams.</font></p>
+
+<table border="0">
+
+  <tbody>
+
+    <tr>
+
+      <td>
+      <form method="LINK" action="FiniteElement1.html"><input value="BACK" type="submit"> </form>
+
+      </td>
+
+    </tr>
+
+  </tbody>
+</table>
+
+<p align="left"><font face="MS Sans Serif" size="+2"><a href="teaching.html">Return to
+Main Teaching Page </a></font></p>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Untitled Document</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+</head>
+<body style="color: rgb(0, 0, 0); background-image: url(BACKGRND.jpg);"
+ link="#000099" vlink="#0075ea">
+<div align="center">
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Differentiation</u></font></p>
+<p align="left"><font face="Comic Sans MS" size="4">As mentioned in
+the&nbsp;(<a href="QuantitativeLab1.html">Quantitative
+Lab</a>)</font><font face="Comic Sans MS" size="4">, other
+kinematic variables such as
+velocity and acceleration can be determined from the position and time
+information collected during motion capture</font><font
+ face="Comic Sans MS" size="4">. &nbsp;The
+purpose of this lab is to
+show how displacement data from motion capture can be processed to
+yield velocity and acceleration data.
+&nbsp;</font></p>
+<p><img src="Differentiation1a.jpg" align="right" height="582"
+ width="400"></p>
+<p align="left"></p>
+<p align="left"><font face="Comic Sans MS" size="4">The table to the
+left shows the output from a film analysis of a ball falling after
+being dropped from a height 1.8 meters. &nbsp;The film camera was
+set
+at 100 frames per second but was found to be actually filming at a rate
+of 101 frames per second.</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">The first column
+shows the digitized vertical positions of the ball in each frame.
+&nbsp;These positions are considered to be the vertical
+displacement
+from the ground. &nbsp;Since these data represent discrete values
+of a
+continuously changing position of the falling ball, we cannot use
+calculus to differentiate the displacement to yield velocity or
+acceleration. &nbsp;However, the computer can use a method of
+finite
+differences to yield values for velocity and acceleration. This method
+is shown below.</font></p>
+<p align="left"><big><font face="Comic Sans MS" size="4"><big>Central
+Finite Differences:</big></font></big></p>
+<p align="left"><font face="Comic Sans MS" size="4">Since the
+computer
+only knows the position of the ball at discrete times, it must estimate
+the slope to get a derivative. In the diagram below, let's assume the
+red line to be the true, continuous trajectory of an object.
+&nbsp;The
+black circles are the digitized positions of the object at three
+subsequent times (frames). &nbsp;If we wish to know the velocity at
+time (t), we would ideally want to calculate the tangent to the red
+line at that instant (see the green line). &nbsp;However,
+&nbsp;the
+computer can only perform &nbsp;calculations on the discrete
+position
+data so the best estimate of the tangent at time &nbsp;t would be
+average slope between t-1 and t+1. &nbsp;We will let deltat t
+represent the time between each frame.<img
+ style="width: 1000px; height: 424px;" alt=""
+ src="Differentiation2a.jpg"></font></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+velocity
+would be the rise divided by the run. &nbsp;Using our ball drop
+experiment data and calculating the velocity for the fourth frame, we
+would use the displacement from the third frame (t-1) and the
+displacement from the fifth frame (t+1) and a deltat t of 0.0099 (101
+frames per second) and perform the calculation below.</span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;"><img
+ style="width: 870px; height: 118px;" alt="" src="Differentiation2b.jpg"></span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">This
+process would be repeated to yield the velocities for each frame and
+the entire procedure would be performed on the velocity data to yield
+accelerations. If we
+plot the resulting velocity and acceleration calculations, we get the
+following:</span></big></p>
+<p><img src="Differentiation3.jpg" align="left" height="607" width="600"></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+figure to the
+left shows the original displacement data in the first column.
+&nbsp;A computer program, using the central finite differences
+method above, printed out velocities and&nbsp;accelerations in the
+second and third columns, respectively. &nbsp;These data are then
+plotted in the respective graphs.</span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">We know
+from
+projectile motion that velocity should be a linearly decreasing
+function with a slope of -9.81 and the acceleration should be a
+constant -9.81 m/s<sup>2</sup>.
+&nbsp;When we look at the graphs, we see the negative tend is
+appearent in velocity but the line is not straight. &nbsp;The
+acceleration data has huge fluctuations and is not even close to the
+constant -9.81. &nbsp;Does this mean that central finite
+differences is a poor method for differentiation?</span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+reason for
+the derivative errors is the fact that the displacement data have small
+high frequency noise (errors) that are not very noticable in the
+displacement plot. &nbsp;The process of differentiation magifies
+these high frequency errors which is why the errors are much more
+obvious in the second derivative than in the first derivative.</span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+solution to
+better derivatives is not to find a better differentiation method, but
+to filter out the high frequency noise. &nbsp;The method for
+filtering will be discussed in the <a href="FrequencyDomain1.html">"Frequency
+Domain
+Processing"</a> lecture.</span></big></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Integration</u></font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Sometimes we
+have acceleration data from an accelerometer and we would need to
+integrate the data once to get velocity and twice to get displacement.
+&nbsp;We also did a form of integration in the <a
+ href="InpulseLab1.html">Impulse/Momentum
+Lab</a> when we
+counted squares to get impulse from a force-time curve of the vertical
+jump. &nbsp;Calculating an integral is the same as finding the area
+under the curve</font><font face="Comic Sans MS" size="4">.
+&nbsp;</font></p>
+<p align="left"><big><font face="Comic Sans MS" size="4"><big>Rectangle
+Rule:</big></font></big></p>
+<p><img src="Differentiation4.jpg" align="right" height="400"
+ width="350"></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+simplest way
+to estimate the
+area is to multiply the data sample by the time interval (delta t).
+&nbsp;That is to calculate the base times the height of a rectangle
+and add up the areas. &nbsp;The shaded blue area is the estimate of
+the area under the curve using this rectangle method. &nbsp;Notice
+that the methof under-estimates the area when the function is
+increasing and over-estimates the area when the function is decreasing.</span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;"></span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+accuracy of
+the method is increased by increasing the sampling rate which decreases
+delta t.</span></big></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><big><font face="Comic Sans MS" size="4"><big>Trapezoidal
+Rule:</big></font></big></p>
+<p><img src="Differentiation5.jpg" align="right" height="360"
+ width="420"></p>
+<p><big><span style="font-family: Comic Sans MS;">The
+accuracy of the rectangle can be improved by adding a triangle on top
+of the rectangle to yield a trapezoid.</span></big>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="MS Sans Serif" size="+2"><a
+ href="teaching.html">Return to Main Teaching Page </a></font></p>
+</div>
+<div align="center">
+</div>
+</body>
+</html>

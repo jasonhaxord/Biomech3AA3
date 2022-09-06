@@ -1,0 +1,228 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Untitled Document</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+</head>
+<body style="color: rgb(0, 0, 0); background-image: url(BACKGRND.jpg);"
+ link="#000099" vlink="#0075ea">
+<div align="center">
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Individual
+Muscle Force Estimation</u></font></p>
+<p><img src="Bone-on-Bone6.jpg" align="right" height="287" width="320"></p>
+<p align="left"><font face="Comic Sans MS" size="4">In the previous
+lectures, we saw that joint reaction forces were not the same as actual
+bone-on-bone forces.
+Click <a href="Bone-on-Bone1.html">here</a>
+if you wish to review that lecture. &nbsp;We also saw that direct
+measurement of individual muscles in living human subjects was
+unacceptably invasive and optimization lacked validity (Click <a
+ href="Indeterminacy1.html">here</a>
+for that lecture).
+In this
+lecture, we will look at a method of using electromyography to estimate
+individual muscle forces and solve the indeterminacy problem. The
+reader should already be familiar with the <a href="EMG1.html">EMG
+lectures</a>.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p style="text-align: center;"><big><font face="Comic Sans MS" size="4"><big>Muscle
+Model</big></font></big></p>
+<p align="left"><font face="Comic Sans MS" size="4">The EMG lectures
+showed that electromyographic electrodes placed on the skin over a
+target muscle or in the target muscle via fine wire, could measure a
+signal that could be processed to reflect the amount of activity in the
+target muscle.</font></p>
+<p><img src="Individual1a.jpg" align="right" height="248" width="700"></p>
+<p align="left"><font face="Comic Sans MS" size="4">This method is
+shown in the diagram to the right.
+Briefly, the raw EMG signal is full wave rectified and smoothed with a
+lowpass filter. &nbsp;The signal is then converted to a percent of
+activation by have the subject exert various levels of effort from
+relaxed to maximum effort and fitting a linear or slightly nonlinear
+line of best fit through the data (see the EMG lectures for details).
+&nbsp;It was stated that this process could represent the force of
+the individual muscles under isometric non-fatigued contractions.
+&nbsp;We will first calibrate the percent activation to muscle
+force and then developed the model to accommodate dynamic contractions.</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Calibration:</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Calibrating the
+amount of muscle force from&nbsp;% activation is not straight
+forward
+because many muscles cross the joint and produce the net joint moment
+that we can measure. However, we know that muscle force is proportional
+to cross-sectional area and the moment is achieved via the moment arm
+of the muscle. Therefore, it is possible to partition the measured
+isometric net joint moment into individual muscle forces based on the
+moment arms and sizes of each muscle crossing the joint. The formula is
+given below, along with an example of three elbow flexor muscles. The
+subject performed a submaximal isometric elbow flexion of 44 N.m (M) of
+which 2 N.m was due to passive stretch (P). The relative
+cross-sectional
+areas&nbsp;of the Biceps, Brachialis and Brachioradialis was 40%,
+40%
+and
+20%, respectively (C) the activations were 37%, 46%, and 52%,
+respectively (A) and the moment arms were 4 cm, 3 cm, and 5 cm,
+respectively
+(MA).</font></p>
+<p><img src="Individual1d.jpg" align="middle" height="426" width="900"></p>
+<p>&nbsp;</p>
+<p><img src="Individual1b.jpg" align="right" height="248" width="650"></p>
+<p align="left"><font face="Comic Sans MS" size="4">The
+equation&nbsp;above allows the calculation of the kth muscle using
+the size C, leverage (MA) and activation (A) of itself relative to the
+total of all the muscles (m) in its group. By substituting the data in
+the example, it was found that Biceps activation of 37% generated 374 N
+of force (10.11 N per % activation). Similarly, when the same
+calculation was made for Brachialis, its 46% activation was equal to
+464 N (10.09 N per % activation) and 52% activation of Brachioradialis
+produced 262 N (5.04 N per % activation). Adding this calibration
+constant to the muscle model is shown in the figure to the right.</font></p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4">Force-length and
+Force-velocity adjustments:</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">In order to
+extend
+the model to allow muscle force estimations in dynamic contractions,
+we
+must account for the fact that muscle generates different forces at
+different lengths and velocities even if the activation is constant.</font></p>
+<p><img src="Individual1e.jpg" align="right" height="413" width="650"></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+figure to the
+right shows how the muscle model can be extended to include
+force-length and force-velocity effects. The joint angle
+kinematics must be measured and converted to the individual muscle
+length. The force-length relation would have a value of 1.0 at the
+optimum length and decline as the muscle shortens or lengthens from
+that optimum. The force-velocity relation would have a value of 1.0 at
+isometric or zero velocity and decline hyperbolically as shortening
+velocity increases and increase with a lengthening (eccentric)
+contraction. For more detail on these relations, click <a
+ href="Muscle1.html">here</a>.</span></big></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">These
+two
+modifiers yield two unitless numbers that are multiplied by the
+calibration constant to give an estimate of muscle force during dynamic
+contractions.</span></big></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">Other
+considerations:</span></big></p>
+<p><img src="Individual1.jpg" align="right" height="559" width="820"></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+muscle model could be even further extended to include fatigue effects
+using the shift in median power frequency, stretch in the series
+elastic element, recovery of stored elastic energy, potentiation
+effects and even changes in electrode pickup as a function of joint
+angle.</span></big></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<br>
+<p style="text-align: center;"><big><font face="Comic Sans MS" size="4"><big>Joint
+Model</big></font></big></p>
+<p align="left"><font face="Comic Sans MS" size="4">Since it is not
+feasible to measure individual muscle forces in living human subjects
+<a href="Inderterminacy1.html">(see the Indeterminacy lecture)</a>,
+we must combine the muscle model with a joint model to estimate
+the net joint moment which we can measure.</font></p>
+<p><img src="Individual2.jpg" align="right" height="457" width="659"></p>
+<p align="left"><font face="Comic Sans MS" size="4">The figure to
+the right shows a method of multiplying each individual muscle force by
+its respective moment arm and adding those to the passive joint
+properties
+(stiffness and viscosity) to produce an estimated joint moment that can
+be compared to the
+measured net joint moment. This is an indirect validation of the muscle
+forces but if we test the estimations over a wide range of contraction
+conditions, and the estimations are a good representation of the
+measured moment, we can have confidence in the individual muscle force
+estimations.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4">Example:</font></p>
+<p><img src="Individual3.jpg" align="right" height="596" width="450"></p>
+<p align="left"><font face="Comic Sans MS" size="4">The figure to
+the right shows the results of using surface electrodes over Biceps,
+Triceps, and Brachioradialis as well as fine wire electrodes in
+Brachialis. The EMG of each of the four muscles was processed to yield
+forces that were multiplied by their respective moment arms which are
+shown on the far right. The Triceps moment is considered to be negative
+because it is opposite to the three flexor muscles. The bottom graph
+shows the sum of the four muscle moments and passive moments to get the
+estimated net joint moment which is plotted with the measured net
+elbow joint moment.</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">It can be seen
+that
+the estimated moment is quite close to the measured moment which gives
+promise to the accuracy of the individual moments and muscle forces.</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Problems with
+Indirect Validation:</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Even though
+there
+is a good agreement between the estimated and measured moments, there
+is the possibility that the force in one muscle was over-estimated
+while a synergist was under-estimated. &nbsp;If a poor agreement
+results, it is difficult to determine which element in the model
+requires improvement. &nbsp;Many of the elements in the model are
+based
+on literature values or animal research that cannot be directly
+compared to an individual subject or patient. &nbsp;However, the
+optimization method could only use phasic EMG patterns as validation
+because the measured moment was already used in the partitioning.
+&nbsp;Therefore, the EMG method of estimating individual muscle
+forces
+has stronger validation.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4">Direct
+Validation with Animals:</font></p>
+<p><img src="Individual4.jpg" align="right" height="591" width="432"></p>
+<p align="left"><big><span style="font-family: Comic Sans MS;">The
+direct
+measurement of individual muscle forces has been performed on animals
+using tendon transducers. &nbsp;The figure on the right shows
+measured tendon forces from a cat soleus muscle during walking (M).
+&nbsp;EMG of the cat's soleus was also measured and applied to a
+muscle model that yielded a predicted muscle force (P). The predicted
+force is quite close to the measured force which indicates that dynamic
+muscle forces can be predicted from EMG and directly validated.</span></big></p>
+<p align="left"><font ="">
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<br>
+</font></p>
+<font =""><br>
+</font>
+<p align="left"><font =""><font face="MS Sans Serif" size="+2"><a
+ href="teaching.html">Return to Main Teaching Page </a></font></font></p>
+</div>
+<div align="center">
+<p><font ="">&nbsp;</font></p>
+<p><font ="">&nbsp;</font></p>
+</div>
+</body>
+</html>

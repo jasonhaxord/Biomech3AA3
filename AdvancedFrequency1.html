@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Untitled Document</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+</head>
+<body style="color: rgb(0, 0, 0); background-image: url(BACKGRND.jpg);"
+ link="#000099" vlink="#0075ea">
+<div align="center">
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Advanced
+Digital Signal Processing</u></font></p>
+<p align="left"><font face="Comic Sans MS" size="4">As mentioned
+in&nbsp;</font><font face="Comic Sans MS" size="4">the&nbsp;<a
+ href="SignalConditioning1.html">Signal
+Conditioning</a>
+lab that a signal can be transformed from the time domain into the
+frequency domain that allows better matching of transducers to signals,
+appropriate sampling rates by the computer (A/D) converter, better
+noise removal by filtering and even fatigue detection via raw <a
+ href="EMG3.html">EMG</a>&nbsp;.
+&nbsp;This lecture shows exactly how the Fourier Transform is
+calculated and how a digital filter is designed.
+&nbsp;</font></p>
+<p><img src="FrequencyDomain1.jpg" align="right" height="350"
+ width="250"></p>
+<p align="left"><big><font face="Comic Sans MS" size="4"><big>Fourier
+Transform:</big></font></big></p>
+<p align="left"><font face="Comic Sans MS" size="4">We are familiar
+with the appearance of a sine wave in the time domain. &nbsp;We
+know that the sine wave is characterized by its amplitude and frequency
+with larger waves having greater amplitude and higher frequency wave
+having more cycles per second (Hz). The same sine wave can be
+represented in the frequency domain with a single vertical line that
+shows its amplitude and frequency (see figure to the right).</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">In terms of pure
+mathematics, the Fourier Transform is an integral shown by the
+following formula:</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Assuming we sampled
+the signal witha computer, the finite mathematics uses the following
+summation formula:</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Let us use the
+example of a square wave signal sampled at 64 samples per second that
+has an amplitude of 1.0 and a frequency of 1.0.</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="FrequencyDomain2.jpg" align="left" height="460" width="250"></p>
+<p align="left"><font face="Comic Sans MS" size="4">It turns out
+that any time domain signal can be broken down to a series of sine
+waves and represented in the frequency domain. &nbsp;The figure on
+the left shows five sine waves at the top in the time domain.
+&nbsp;When these sine waves are added together to yield a one
+signal and plotted in the time domain, we see the comlex signal in the
+middle. &nbsp;If we could take the signal in the middle and break
+it down into frequencies and amplitudes, we could plot the signal in
+the frequency domain. &nbsp;The graph on the bottom shows the
+frequency domain plot and we can clearly see the amplitudes and
+frequencies of the original sine waves.</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">There is a
+mathematical technique discovered by the french mathematician, Joseph
+Fourier (1768-1830) called the "Fourier Transform" that transforms time
+domain
+signals into frequency domain signals. &nbsp;The figure below shows
+a raw EMG signal in both the time domain and the frequency domain.
+&nbsp;Modern computer algorithms use the "Fast Fourier Transform"
+often refered to as an FFT. A more in-depth look at the FFT is examined
+in the <a href="AdvancedFrequency1.html">
+Advanced Frequency Domain Processing</a>
+lecture.
+</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Comic Sans MS" size="4"><img src="FrequencyDomain3.jpg"
+ align="middle" height="380" width="950"></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><big><font
+ face="Comic Sans MS" size="4"><big>Digital
+Filtering:</big></font></big></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Now that we can
+see signals in the frequency domain, we can determine the fatigue state
+of muscle, match the frequency response of a transducer, sample a
+signal at a high enough rate and remove high frequency noise from
+displacement data. &nbsp;The last point will be covered in this
+section.</font></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Lowpass Filter -
+One of the most widely used filters in biomechanics is the lowpass
+filter. &nbsp;This filter removes high frequency noise from
+displacement data so that accurate derivatives can be found using the
+central finite differences method we learned in the signal processing
+lab.&nbsp;</font></font></p>
+<p><img src="FrequencyDomain5.jpg" align="right" height="230"
+ width="400"></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">The diagram to
+the right shows the frequency response of a lowpass filter. Like the
+name implies, it passes the lower frequencies and attenuates the higher
+frequencies. &nbsp;One way to visualize this process is to imagine
+that the sine waves of the lower frequencies are multiplied by one
+(gain = 1) and the higher frequencies are multiplied by numbers
+approaching zero. &nbsp;The frequency that distinguishes between
+the frequencies with a gain of one and the attenuated frequencies is
+called the cutoff frequency (fc). There are different types of lowpass
+filters, the most common is the Butterworth filter. &nbsp;The
+design and application of different filters is a topic of the
+<a href="AdvancedFrequency1.html">Advanced
+Frequency Domain Processing</a>
+lecture.
+</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Comic Sans MS" size="4"><img src="FrequencyDomain6.jpg"
+ align="right" height="700" width="600"></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Highpass Filter
+- When low frequencies are to be eliminated and high frequencies
+maintained, we use a highpass filter. &nbsp;Integration of
+accelerometer data is highly prone to low frequency noise.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Bandpass Filter
+- EMG has a bandwidth between 10 and 500 Hz so we would like to remove
+frequencies below 10 and above 500. &nbsp;The banpass filter uses
+two cutoff frequencies to combine low and highpass filters.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Band Reject
+Filter (Notch Filter) - The removeal of 60Hz interference from EMG
+requires a filter that rejects 60Hz and keeps the other frequencies.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="MS Sans Serif" size="+2"><a href="teaching.html">Return to Main
+Teaching Page </a></font></font></p>
+</div>
+<div align="center">
+</div>
+</body>
+</html>

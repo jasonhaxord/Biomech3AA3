@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Untitled Document</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+</head>
+<body style="color: rgb(0, 0, 0); background-image: url(BACKGRND.jpg);"
+ link="#000099" vlink="#0075ea">
+<div align="center">
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Projectiles
+with Air Resistance</u></font></p>
+<p><img src="air1.jpg" align="right" height="370" width="490"></p>
+<p align="left"><font face="Comic Sans MS" size="4">In
+the previous lecture ( <a href="drag1.html">drag
+and cycling mechanics</a>
+)
+we saw that drag is the resistance to motion and is a function of the
+square of velocity. &nbsp;In this lecture, we will combine the drag
+coefficient, fluid density and projected area into a single constant
+called "k". &nbsp;When an object falls, it has the force of gravity
+acting downward and the drag force opposing that downward motion.
+&nbsp; According to Newton's second law, the sum of these forces is
+equal to the product of mass and acceleration. Re-balancing this
+equation, we see that the&nbsp;acceleration of the object is a
+function
+of&nbsp;velocity which changes with time. &nbsp;If the object
+is dropped with an initial velocity of zero, the acceleration is -g.
+&nbsp;However, that acceleration causes an increase in the downward
+velocity which in turn reduces the acceleration. &nbsp;When the
+downward velocity reaches the point when k/m.V<sup>2</sup>
+= g, acceleration will be zero and the velocity will remain
+constant. This constant velocity is called "terminal velocity" and is
+equal to the square root of m.g/k. &nbsp;The value for k is
+proportional to the cross-sectional area so object with a very high
+mass to cross-sectional area ratio will be little affected by air
+resistance whereas objects with a low ratio will be greatly affected.
+&nbsp;The famous experiment of Galileo dropping the cannon balls from
+the leaning tower of Pisa would have turned out quite differently had
+he used objects that were more influenced by air resistance.&nbsp;</font></p>
+<p><img src="air2.jpg" align="right" height="370" width="600"></p>
+<p align="left"><font face="Comic Sans MS" size="4">Without
+air
+resistance, the acceleration was a constant -9.81 m/s<sup>2</sup>
+that
+was easily integrated to yield equations for velocity and displacement.
+&nbsp;With air resistance, however, the acceleration function is
+more
+difficult to integrate and requires the ability to solve first order
+differential equations. &nbsp;In this case, we get a hyperbolic tan
+function for velocity that reaches a maximum downward value (v<sub>t</sub>)
+shown in the lower right graph. &nbsp;This value is commonly called
+the terminal velocity and is dependent on mass, k and g as explained in
+the paragraph above.</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">Another method
+to integrate complicated functions is to use the
+numerical
+method that we learned in the laboratory portion. &nbsp;A simple
+computer algorithm is given below in which the acceleration is assumed
+to be constant for a very short period of time to allow an area
+calculation to be made. &nbsp;That area is equal to the change in
+velocity and with this new velocity, subsequent accelerations can be
+calculated. &nbsp;The same method can be used to integrate the
+velocities and yield displacements. &nbsp;The figure below shows
+the algorithm and results of a 70kg object dropped from a height of
+300m with k=0.3. &nbsp;The time period was chosen to be 0.25s (delta
+t)
+but this value can be made smaller for greater accuracy. The last two
+columns in the output show the actual velocity and acceleration using
+the equations above for an object falling with air resistance.</font></p>
+<p align="left"></p>
+<p><img src="air3.jpg" align="middle" height="420" width="830"></p>
+<p align="left"><font face="Comic Sans MS" size="+1">The output for
+the
+acceleration is shown graphically below with the actual acceleration.
+&nbsp;It can be seen that the area of the rectangles is easily
+calculated and follows the actual accelerations fairly closely.
+&nbsp;If the width of the rectangles was reduced by choosing a
+smaller
+delta t, the area would be closer to the actual velocity.&nbsp;</font></p>
+<p><img src="air4.jpg" align="middle" height="400" width="580"></p>
+<p align="left"><font face="Comic Sans MS" size="4">If the object
+starts with a positive or upward velocity, the air resistance will be a
+downward or negative force since drag always opposes motion.</font></p>
+<p><img src="air5.jpg" align="right" height="220" width="490"></p>
+<p align="left"><font face="Comic Sans MS" size="4">The velocities
+and displacements can be calculated with an algorithm similar to the
+one above by changing the acceleration &nbsp;formula to have a
+negative drag term instead of positive. &nbsp;This new algorithm
+would apply until the velocity reaches zero at which time the object
+will be at maximum height and then the original algorithm would apply
+as the object falls.
+</font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="MS Sans Serif" size="+2"><a href="teaching.html">Return to Main
+Teaching Page </a></font></font></p>
+</div>
+<div align="center">
+<p><font face="Comic Sans MS" size="4">&nbsp;</font></p>
+<p><font face="Comic Sans MS" size="4">&nbsp;</font></p>
+</div>
+</body>
+</html>

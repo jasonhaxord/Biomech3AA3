@@ -1,0 +1,229 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Untitled Document</title>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+</head>
+<body style="color: rgb(0, 0, 0); background-image: url(BACKGRND.jpg);"
+ link="#000099" vlink="#0075ea">
+<div align="center">
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Frequency
+Domain Processing</u></font></p>
+<p align="left"><font face="Comic Sans MS" size="4">As mentioned in
+the&nbsp;<a href="Differentiation1.html">Differentiation
+Lab</a></font><font face="Comic Sans MS" size="4">, high frequency
+noise on the digitized ball drop experiment caused large errors in
+velocity and especially acceleration</font><font face="Comic Sans MS"
+ size="4">. &nbsp;It
+was also mentioned in the&nbsp;<a href="SignalConditioningLab1.html">Signal
+Conditioning</a>
+lab that a signal must be
+sampled at twice the highest frequency component in the signal to avoid
+aliasing errors. &nbsp;When we examined the <a href="Transducers1.html">
+properties of transducers</a>, we
+found out that the frequency response must match the
+signal being measured. &nbsp;We also know that the raw <a
+ href="EMG3.html">EMG</a>
+signal
+shifts to lower frequencies as the muscle becomes fatigued.
+&nbsp;These are just a few reasons why it&nbsp;is important to
+be able examine biomechanical signals in the frequency domain.
+&nbsp;We are quite used to looking at signals in the time domain
+but this lecture shows us we can examine signals in the frequency
+domain.
+&nbsp;</font></p>
+<p><img src="FrequencyDomain1.jpg" align="right" height="350"
+ width="250"></p>
+<p align="left"><big><font face="Comic Sans MS" size="4"><big>Fourier
+Transform:</big></font></big></p>
+<p align="left"><font face="Comic Sans MS" size="4">We are familiar
+with the appearance of a sine wave in the time domain. &nbsp;We
+know that the sine wave is characterized by its amplitude and frequency
+with larger waves having greater amplitude and higher frequency wave
+having more cycles per second (Hz). The same sine wave can be
+represented in the frequency domain with a single vertical line that
+shows its amplitude and frequency (see figure to the right).</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><img src="FrequencyDomain2.jpg" align="left" height="460" width="250"></p>
+<p align="left"><font face="Comic Sans MS" size="4">It turns out
+that any time domain signal can be broken down to a series of sine
+waves and represented in the frequency domain. &nbsp;The figure on
+the left shows five sine waves at the top in the time domain.
+&nbsp;When these sine waves are added together to yield a one
+signal and plotted in the time domain, we see the complex signal in the
+middle. &nbsp;If we could take the signal in the middle and break
+it down into frequencies and amplitudes, we could plot the signal in
+the frequency domain. &nbsp;The graph on the bottom shows the
+frequency domain plot and we can clearly see the amplitudes and
+frequencies of the original sine waves.</font></p>
+<p align="left"><font face="Comic Sans MS" size="4">There is a
+mathematical technique discovered by the French mathematician, Joseph
+Fourier (1768-1830) called the "Fourier Transform" that transforms time
+domain
+signals into frequency domain signals. &nbsp;The figure below shows
+a raw EMG signal in both the time domain and the frequency domain.
+&nbsp;Modern computer algorithms use the "Fast Fourier Transform"
+often referred to as an FFT. A more in-depth look at the FFT is
+examined
+in the <a href="AdvancedFrequency1.html">
+Advanced Digital Signal
+Processing</a>
+lecture.
+</font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Comic Sans MS" size="4"><img src="FrequencyDomain3.jpg"
+ align="middle" height="380" width="950"></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Now that we can
+see signals in the frequency domain, we can determine the fatigue state
+of muscle, match the frequency response of a transducer, sample a
+signal at a high enough rate and remove high frequency noise from
+displacement data. &nbsp;The last point will be covered in the next
+section.</font></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><big><font
+ face="Comic Sans MS" size="4"><big>Filtering
+and Noise Removal:</big></font></big></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Noise is defined
+as any part of a signal that is unwanted. &nbsp;The quality of
+signal is often measured by the signal to noise ratio. &nbsp; For
+example, lets us assume that we filmed a pendulum swinging back and
+forth and we digitized the vertical position. We know the the pendulum
+is a periodic signal that should look like a perfect sine wave.
+&nbsp;However, we also have random digitization errors so that our
+measured signal will have the true signal plus noise.</font></font></p>
+<img src="SignalConditioningLab8.jpg" align="middle" height="380"
+ width="950">
+<p></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">In this case, we
+have random, high
+frequency noise of the digitization errors (black) included with the
+actual pendulum motion (red). &nbsp;If the amplitude of the signal
+is
+10 and the amplitude of the noise is 1, we have a 10:1 signal to noise
+ratio. &nbsp;We could reduce the noise by calculating the average
+or
+mean of a few data points and moving through the signal step by step.
+&nbsp;This procedure is called a moving average and it will improve
+the
+signal to noise ratio but there is a better way. &nbsp;If we know
+that
+the pendulum is a low frequency signal and the noise is high frequency,
+and we had a way of keeping the low frequency data and removing the
+high frequency data, we could remove noise without averaging or
+changing the signal.</font></font></p>
+<img src="FrequencyDomain7.jpg" align="right" height="580" width="531">
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4"> Recall from the
+signal conditioning lecture the bandwidths of some common
+biomechanical signals. We saw that voluntary movement has frequency
+components between 0 and 10 Hz, impact had higher frequencies and EMG
+had a bandwidth between 10 and 1000Hz. &nbsp;Some common types of
+noise
+are the bias or constant error, low frequency drift and white noise.</font></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Knowing the
+bandwidth of our expected
+signal and the bandwidth of noise allows us to separate the noise from
+the signal. In the case of the pendulum above, we know that the signal
+has a rather low frequency and if we process the signal such that thigh
+slow frequency is accepted and all higher frequencies are rejected, we
+could remove the noise without distorting the signal. &nbsp;The
+bottom
+line is that noise cannot be separated from signal in the time domain
+as well as it can be separated in the frequency domain.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4">Another example of
+noise removal is to remove movement artifact from EMG. &nbsp;The
+diagram below shows the EMG signal from a repetitive task and we can
+see the common bursting pattern of raw EMG when the muscle is
+activated. &nbsp;We can also see a lower frequency wavering of the
+signal between the bursts. The lower frequency wavering is caused by
+the EMG cable movement as the subject moves has nothing to do with
+muscle activation. Since we know that EMG has no frequency components
+below 10 Hz, we could eliminate the wavering from the entire signal by
+removing all frequencies below 10 Hz and the true EMG signal would not
+be affected.
+</font></p>
+<p><img src="SignalConditioningLab7.jpg" align="middle" height="218"
+ width="740"></p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">The process of
+removing some frequencies
+while maintaining others is known as filtering. The following section
+describes the four main categories of filters.</font></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Lowpass Filter -
+One of the most widely used filters in biomechanics is the lowpass
+filter. &nbsp;This filter removes high frequency noise from
+displacement data so that accurate derivatives can be found using the
+central finite differences method we learned in the signal processing
+lab.&nbsp;</font></font></p>
+<p><img src="FrequencyDomain5.jpg" align="right" height="230"
+ width="400"></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">The diagram to
+the right shows the frequency response of a lowpass filter. Like the
+name implies, it passes the lower frequencies and attenuates the higher
+frequencies. &nbsp;One way to visualize this process is to imagine
+that the sine waves of the lower frequencies are multiplied by one
+(gain = 1) and the higher frequencies are multiplied by numbers
+approaching zero. &nbsp;The frequency that distinguishes between
+the frequencies with a gain of one and the attenuated frequencies is
+called the cutoff frequency (fc). There are different types of lowpass
+filters, the most common is the Butterworth filter. &nbsp;The
+design and application of different filters is a topic of the
+<a href="AdvancedFrequency1.html">Advanced
+Frequency Domain Processing</a>
+lecture.
+</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><font face="Comic Sans MS" size="4"><img src="FrequencyDomain6.jpg"
+ align="right" height="700" width="600"></font></p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Highpass Filter
+- When low frequencies are to be eliminated and high frequencies
+maintained, we use a highpass filter. &nbsp;Integration of
+accelerometer data is highly prone to low frequency noise.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Bandpass Filter
+- EMG has a bandwidth between 10 and 500 Hz so we would like to remove
+frequencies below 10 and above 500. &nbsp;The bandpass filter uses
+two cutoff frequencies to combine low and highpass filters.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="Comic Sans MS" size="4">Band Reject
+Filter (Notch Filter) - The removal of 60Hz interference from EMG
+requires a filter that rejects 60Hz and keeps the other frequencies.</font></font></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p align="left"><font face="Comic Sans MS" size="4"><font
+ face="MS Sans Serif" size="+2"><a href="teaching.html">Return to Main
+Teaching Page </a></font></font></p>
+</div>
+<div align="center">
+</div>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+  <title>Untitled Document</title>
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+
+</head>
+
+
+<body style="color: rgb(0, 0, 0); background-image: url(BACKGRND.jpg);" link="#000099" vlink="#0075ea">
+
+<div align="center">
+<p><font color="#000000" face="Comic Sans MS" size="5"><u>Forward
+Dynamics and Human Movement Simulation</u></font></p>
+
+<p><img src="forward1.jpg" align="right" height="370" width="400"></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">The lecture on
+<a href="dynamic1.html">dynamic
+equilibrium</a> used Newton's second
+law and the inverse dynamics
+approach to solve the internal kinetics (joint reaction forces and net
+joint moments). &nbsp;Inverse dynamics is used when masses
+(inertia)
+and accelerations (kinematics) are known and forces (kinetics) are
+calculated. The forward dynamics approach is used when the kinetics and
+inertia are known and the kinematics are calculated. The diagram at the
+right shows a single segment controlled by a moment of force or torque
+that tends to rotate the segment about the proximal end (T<sub>1</sub>).</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">The angular acceleration can be calculated by
+dividing the
+net joint moment (T<sub>1</sub>) by the moment of inertia.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p align="left"><font face="Comic Sans MS" size="4">Once the angular
+acceleration is
+found, the angular velocity and angular displacement can be determined
+via
+integration. This integration is performed by the computer in a way
+that is similar to the method that we used to find the velocity and
+displacement of an object falling with <a href="air1.html">air
+resistance</a>. Namely, the
+acceleration is considered to have occurred for a very short period of
+time and the area or velocity is determined by multiplying the
+acceleration by the time interval. The displacement is found by
+considering that velocity occurred for the same short time period and
+multiplying the velocity by that time. The computer iteratively
+calculates accelerations, velocities and displacements for many small
+time intervals over the period of the simulation. &nbsp;</font></p>
+
+<p><img src="forward7.jpg" align="middle" height="420" width="1254"></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">A system of two
+segments controlled by T<sub>1</sub>
+and T<sub>2</sub>
+is more complicated.&nbsp; The angular acceleration of segment 1 is
+effected by more than just T<sub>1</sub>.
+&nbsp;There are two equations
+which must be solved to yield the two angular accelerations.</font></p>
+
+<p><img src="forward2.jpg" align="middle" height="280" width="1172"></p>
+
+<p align="left"><font face="Comic Sans MS" size="4">The angular
+accelerations of the two&nbsp;segments
+are affected by the angular velocity of segment 2 due to coriolis
+effects which is affected by the relative joint angle as well as the
+masses, lengths and moments of inertia.
+&nbsp;The example below shows a very simple situation of a system
+at rest and only a moment generated about joint 2.</font></p>
+
+<p><img src="forward4.jpg" align="right" height="460" width="620"></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">It can be seen
+that even though T<sub>1</sub>
+= 0, both segments accelerate due to the interactions between the two
+segments. T<sub>2</sub>
+causes a positive acceleration of segment 2 which is expected but it
+also caused a negative acceleration of segment 1.</font></p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+<p><img src="forward5.jpg" align="left" height="450" width="725"></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">The
+accelerations
+above will cause changes in the segment velocities and the joint angles
+which will cause the accelerations to change even if T<sub>1</sub>
+and T<sub>2</sub>
+remain 0 N.m and 4 N.m, respectively. Computer simulations perform the
+integrations of these accelerations over a very short time period to
+obtain the changes in velocity and displacement and then re-calculate
+the new accelerations in an iterative process that simulates the
+movement outcomes of the joint moments (T<sub>1</sub>
+and T<sub>2</sub>).</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">The table on
+the
+left is the output from a computer simulation of the above example that
+T<sub>2</sub>
+= 4 N.m for 0.1 seconds and then both moments are zero.
+&nbsp;It can be seen that the velocities (Omega2 and Omega1) change
+and
+so too do the joint angles (Theta2 and Theta1). &nbsp;Also notice
+that
+the segments continue to accelerate even after the moments are turned
+off (after 0.1 seconds). &nbsp;</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">A three segment
+system becomes even more involved with the equations becoming much
+longer and the need to solve the three unknowns simultaneously (see
+below).
+&nbsp;Computer methods allow the solution to be found and enable
+the biomechanics researcher to create fairly complex multi-segment
+models of the human body and calculate the resulting accelerations from
+known joint torques.</font></p>
+
+<p><img src="forward6.jpg" align="middle" height="340" width="1140"></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">It
+is even possible to replace the joint
+torques with individual muscle forces for an even higher degree of
+similarity to human movement and conduct experiments on the best way to
+perform a skill. &nbsp;Such experiments have used the term "<span style="font-style: italic;">in-silico</span>"
+to separate an experiment performed by computer simulation from other
+biological terms such as "<span style="font-style: italic;">in-vivo</span>",
+"<span style="font-style: italic;">in-vitro</span>"
+and <span style="font-style: italic;">in-situ</span>".</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">Levels of
+understanding:</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">1) "Don't know
+what happened" - no observation, description or empirical evidence</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">2) "Know what
+happened but don't know why it happened" - kinematic description but
+know kinetic causes</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">3) "Know the
+causes but don't know how to change the result" - kinetic analysis but
+unsure of the consequences of making a change</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">4) "Know what
+happened, why it happened and how to change the outcome".</font></p>
+
+<p align="left"></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">Pros and Cons
+of
+Human Simulations:</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">Pros&nbsp;&nbsp;&nbsp;
+-perfectly controlled experiment (A causes B)</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -no
+experimental error due to
+transducers or noise</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -
+inexpensive equipment (computer)</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - test
+hypotheses that are
+experimentally unethical on human or animal subjects</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">Cons&nbsp;&nbsp;&nbsp;
+- mathematically complex</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; -
+validity of results limited to
+accuracy of model to real human subjects</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; - few
+clinical applications.</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1"><span style="font-style: italic;">In-Silico</span>
+Experiments:</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">- role of two
+joint muscles in the vertical jump</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">- most
+economical method of walking</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">- surgical
+alteration consequences</font></p>
+
+<p align="left"><font face="Comic Sans MS" size="+1">- technique for
+reduced ACL strain.</font></p>
+
+<p align="left"></p>
+
+<p align="left"><font face="MS Sans Serif" size="+2"><a href="teaching.html">Return to
+Main Teaching Page </a></font></p>
+
+</div>
+
+<div align="center">
+<p>&nbsp;</p>
+
+<p>&nbsp;</p>
+
+</div>
+
+</body>
+</html>
